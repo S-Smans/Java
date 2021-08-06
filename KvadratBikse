@@ -1,0 +1,88 @@
+import javax.swing.*;
+import javax.swing.border.Border;
+import java.awt.*;
+
+public class SpongeBob {
+
+    public static void main(String[] args) {
+        ImageIcon chadWardImage = new ImageIcon(SpongeBob.class.getClassLoader().getResource("res/ChadWard.jpg"));
+        ImageIcon spongeBallImage = new ImageIcon(SpongeBob.class.getClassLoader().getResource("res/SpongeBall.jpg"));
+        ImageIcon patWickImage = new ImageIcon(SpongeBob.class.getClassLoader().getResource("res/patWick.jpg"));
+        ImageIcon sandyImage = new ImageIcon(SpongeBob.class.getClassLoader().getResource("res/sandy.jpg"));
+
+
+        Border squidBorder = BorderFactory.createLineBorder(new Color(0x737621),8);
+        Border spongeBorder = BorderFactory.createLineBorder(new Color(0x8B7D0C),8);
+        Border patBorder = BorderFactory.createLineBorder(new Color(0x0C0808),8);
+        Border sandyBorder = BorderFactory.createLineBorder(new Color(0x5CBD90),8);
+
+        JLabel squidLabel = new JLabel();
+        JLabel spongeLabel = new JLabel();
+        JLabel patLabel = new JLabel();
+        JLabel sandyLabel = new JLabel();
+
+
+        squidLabel.setText("ChadWard");
+        squidLabel.setIcon(chadWardImage);
+        squidLabel.setForeground(new Color(0xAD9658));
+        squidLabel.setBorder(squidBorder);
+        squidLabel.setIconTextGap(-2);
+        squidLabel.setOpaque(true);
+        squidLabel.setBackground(new Color(0x494608));
+        squidLabel.setFont(new Font("Comic Sans MS", Font.BOLD, 22));
+        squidLabel.setVerticalTextPosition(SwingConstants.TOP);
+        squidLabel.setHorizontalTextPosition(SwingConstants.CENTER);
+        squidLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        squidLabel.setVerticalAlignment(SwingConstants.CENTER);
+        squidLabel.setBounds(0,0,250,250);
+
+        spongeLabel.setText("SpongeBall");
+        spongeLabel.setIcon(spongeBallImage);
+        spongeLabel.setBackground(new Color(0xEAD03F));
+        spongeLabel.setBorder(spongeBorder);
+        spongeLabel.setForeground(new Color(0x5E6317));
+        spongeLabel.setIconTextGap(-2);
+        spongeLabel.setFont(new Font("Comic Sans MS", Font.BOLD, 22));
+        spongeLabel.setOpaque(true);
+        spongeLabel.setHorizontalTextPosition(SwingConstants.CENTER);
+        spongeLabel.setVerticalTextPosition(SwingConstants.TOP);
+        spongeLabel.setBounds(250,0,250,250);
+
+        patLabel.setText("PatWick");
+        patLabel.setBorder(patBorder);
+        patLabel.setIcon(patWickImage);
+        patLabel.setIconTextGap(-2);
+        patLabel.setForeground(Color.BLACK);
+        patLabel.setBackground(new Color(0x3E3C3C));
+        patLabel.setFont(new Font("Comic Sans MS", Font.BOLD, 22));
+        patLabel.setOpaque(true);
+        patLabel.setVerticalTextPosition(SwingConstants.TOP);
+        patLabel.setHorizontalTextPosition(SwingConstants.CENTER);
+        patLabel.setBounds(0,250,250,250);
+
+        sandyLabel.setText("Sandy");
+        sandyLabel.setBorder(sandyBorder);
+        sandyLabel.setIcon(sandyImage);
+        sandyLabel.setIconTextGap(-2);
+        sandyLabel.setForeground(Color.blue);
+        sandyLabel.setBackground(new Color(0x2C82AA));
+        sandyLabel.setFont(new Font("Comic Sans MS", Font.BOLD, 22));
+        sandyLabel.setOpaque(true);
+        sandyLabel.setVerticalTextPosition(SwingConstants.TOP);
+        sandyLabel.setHorizontalTextPosition(SwingConstants.CENTER);
+        sandyLabel.setBounds(250,250,250,250);
+
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.setLayout(null);
+        frame.setResizable(false);
+        frame.setSize(516,539);
+        frame.setTitle("KvadratBikse");
+
+        frame.add(squidLabel);
+        frame.add(spongeLabel);
+        frame.add(patLabel);
+        frame.add(sandyLabel);
+    }
+}
